@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+          width:100px;
+          height:100px;
+          background-color: red;
+          position:relative;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("#right").click(function(){
+              $("#box").animate({"left":"+=100px"})
+          })
+          $("#left").click(function(){
+              $("#box").animate({"left":"-=100px"})
+          })
+          $("#top").click(function(){
+              $("#box").animate({"top":"-=100px"})
+          })
+          $("#bottom").click(function(){
+              $("#box").animate({"top":"+=100px"})
+          })
+      })
+    </script>
+</head>
+<body>
+    <button id="right">right</button>
+    <button id="left">left</button>
+    <button id="top">top</button>
+    <button id="bottom">bottom</button>
+    <div id="box">
+        박스
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+          width:100px;
+          height:100px;
+          background-color: red;
+          position:relative;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $(document).on("keydown",keyEventFnc)
+          //키가 눌려지면 keyEventFnc함수를 실행한다.
+
+          function keyEventFnc(e){//매개변수e에 이벤트 객체 정보가 들어온다. 
+              console.log(e.keyCode)//이벤트 객체 안에서 키코드값만 출력
+              //윗방향키-38
+              //왼쪽방향키-37
+              //아래방향키-40
+              //오른쪽방향키-39
+              switch(e.keyCode){
+                case 37://왼쪽 방향키
+                    $("#user-id").val("LEFT")
+                    $("#box").animate({"left":"-=100px"},100)
+                    break;
+                case 38://윗 방향키
+                    $("#user-id").val("TOP")
+                    $("#box").animate({"top":"-=100px"},100)
+                    break;
+                case 39://오른쪽 방향키
+                    $("#user-id").val("RIGHT")
+                    $("#box").animate({"left":"+=100px"},100)
+                    break;
+                case 40://아래 방향키
+                    $("#user-id").val("BOTTOM")
+                    $("#box").animate({"top":"+=100px"},100)
+                    break;
+              }
+          }
+      })
+    </script>
+</head>
+<body>
+     <p>
+        <input type="text" name="user-id" id="user-id"/>
+     </p>
+     <div id="box">
+        박스
+    </div>
+</body>
+</html>

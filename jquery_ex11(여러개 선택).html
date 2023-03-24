@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        function myFunc(){
+            $("#my-div,.my-h1,h2").css("color","red")
+            .css("backgroundColor","blue")
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        내 div
+    </div>
+    <h1 class="my-h1">내 제목</h1>
+    <h2>내 제목</h2>
+    <button onClick="myFunc()">클릭</button>
+</body>
+</html>

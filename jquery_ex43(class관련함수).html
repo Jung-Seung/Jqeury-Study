@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            background-color: aqua;
+        }
+        .my-red{
+            color:red;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    function myAddClass(){  
+        $("#my-div").addClass("my-red")
+    }
+    function myRemoveClass(){  
+        $("#my-div").removeClass("my-red")
+    }
+    function myHasClass(){
+        var result=$("#my-div").hasClass("my-red")
+        alert(result)
+    }
+</script>
+<body>
+    <div id="my-div">
+        내 div
+    </div>
+    <button onClick="myAddClass()">추가</button>
+    <button onClick="myRemoveClass()">제거</button>
+    <button onClick="myHasClass()">검사</button>
+</body>
+
+</html>

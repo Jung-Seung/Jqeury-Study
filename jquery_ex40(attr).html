@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    function myFunc(){
+        $("#my-img").attr('src','./images/cat.jpg')
+        //document.getElementById("my-img").setAttribute('src','./images/cat.jpg')
+        //setter - src속성의 값을 ~~~로 변경
+    }
+</script>
+<body>
+    <img src="./images/dog.jpg" id="my-img" alt="개">
+    <button onClick="myFunc()">클릭</button>
+</body>
+
+</html>

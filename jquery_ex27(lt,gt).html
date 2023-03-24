@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    function myFunc(){
+        $("#menu>li:lt(3)").css("backgroundColor","red")
+        //less than - ~보다 작다
+        //lt(3) - 인덱스 3번째 보다 작은것~ 이전꺼~
+
+        $("#menu>li:gt(3)").css("backgroundColor","blue")
+        //greater than - ~보다 크다
+        //gt(3) - 인덱스 번호 3보다 뒤에꺼~
+    }
+</script>
+<body>
+    <ul id="menu">
+        <li>리스트1(index:0)</li>
+        <li>리스트2(index:1)</li>
+        <li>리스트3(index:2)</li>
+        <li>리스트4(index:3)</li>
+        <li>리스트5(index:4)</li>
+        <li>리스트6(index:5)</li>
+    </ul>
+    <button onClick="myFunc()">클릭</button>
+</body>
+
+</html>

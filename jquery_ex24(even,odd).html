@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    function myFunc(){
+        $("#menu>li").even().css("backgroundColor","red")
+        $("#menu>li").odd().css("backgroundColor","blue")
+    }
+</script>
+<body>
+    <ul id="menu">
+        <li>리스트1(index:0)</li>
+        <li>리스트2(index:1)</li>
+        <li>리스트3(index:2)</li>
+        <li>리스트4(index:3)</li>
+        <li>리스트5(index:4)</li>
+        <li>리스트6(index:5)</li>
+    </ul>
+    <button onClick="myFunc()">클릭</button>
+</body>
+
+</html>

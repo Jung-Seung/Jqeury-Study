@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){//on메서드로 그룹 이벤트 등록
+        $("#btn").hover(
+            function(){//mouseover시에~
+                $("#btn").parent().next().css("backgroundColor","red")
+            },
+            function(){//mouseout시에~
+                $("#btn").parent().next().css("backgroundColor","green")
+            }
+        )
+    })
+</script>
+<body>
+    <p>
+        <button id="btn">버튼</button>
+    </p>
+    <p id="para">
+        내용
+    </p>
+</body>
+
+</html>

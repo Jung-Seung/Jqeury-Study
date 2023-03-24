@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       button{
+         width:51px;
+         height:51px;
+         border:none;
+         cursor: pointer;
+       }
+       .play{
+         background-image: url('./images/play.jpg');
+         background-repeat:no-repeat;
+       }
+       .pause{
+         background-image: url('./images/pause.jpg');
+         background-repeat:no-repeat;
+       }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+       function myToggleFunc(){
+            var result=$("#btn").hasClass('play')
+            if(result===true){
+               $("#btn").removeClass('play')
+               $("#btn").addClass('pause')
+            }else if(result===false){
+               $("#btn").removeClass('pause')
+               $("#btn").addClass('play')
+            }
+       }
+    </script>
+</head>
+<body>
+    <button onclick="myToggleFunc()" class="play" id="btn"></button>
+</body>
+</html>

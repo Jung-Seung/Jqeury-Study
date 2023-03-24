@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){//on메서드로 그룹 이벤트 등록
+            $(document).on("keydown",keyEventFnc)
+            function keyEventFnc(e){
+                //keydown시에 발생한 이벤트객체 정보가
+                //매개변수 e로 넘어온다.
+                //e는 이벤트 객체 (거대한~)
+                console.log(e.keyCode)
+                switch(e.keyCode){
+                    case 37://왼쪽 방향키
+                        $("#user-id").val("LEFT")
+                        break;
+                    case 38://윗 방향키
+                        $("#user-id").val("TOP")
+                        break;
+                    case 39://오른쪽 방향키
+                        $("#user-id").val("RIGHT")
+                        break;   
+                    case 40://아래 방향키
+                        $("#user-id").val("BOTTOM")
+                        break;     
+                }
+            }
+    })
+</script>
+<body>
+    <input type="text" id="user-id"/>
+</body>
+
+</html>

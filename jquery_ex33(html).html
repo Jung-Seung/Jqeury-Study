@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    function myFunc(){
+        var result=$("#my-div").html()//<b>내용!</b>
+        //var result=$("#my-div").text()//내용!
+        //getter방식
+        alert(result)
+    }
+</script>
+<body>
+    <div id="my-div">
+        <b>내용!</b>
+    </div>
+    <button onClick="myFunc()">클릭</button>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width:5000px;
+            height:10000px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){//on메서드로 그룹 이벤트 등록
+            $(window).on("scroll",function(){
+                //scroll이벤트는 윈도우 객체에 걸었다.
+                //scroll이벤트가 일어나면 익명콜백실행한다.
+                var sc_top=$(this).scrollTop()
+                var sc_left=$(this).scrollLeft()
+                console.log("sc_top:"+sc_top)
+                console.log("sc_left:"+sc_left)
+            })
+    })
+</script>
+<body>
+    
+</body>
+
+</html>

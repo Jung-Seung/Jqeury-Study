@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+          width:100px;
+          height:100px;
+          background-color: red;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#box").fadeIn()//스르륵 나타나는 모양
+            })
+
+            $("#btn2").click(function(){
+                $("#box").fadeOut()//스르륵 사라지는 모양
+            })
+            //그래서 fadeIn,fadeOut을써서, fade방식 슬라이드 만들때 쓴다.
+      })
+    </script>
+</head>
+<body>
+    <button id="btn1">fadeIn</button>
+    <button id="btn2">fadeOut</button>
+    <div id="box">
+        박스
+    </div>
+</body>
+</html>

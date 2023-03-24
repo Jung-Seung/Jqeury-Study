@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<script>
+    function myFunc(){
+        $("#li2").parent().css("backgroundColor","red")
+        //parent메서드실행,css메서드 실행 (체이닝~)
+        //parent메서드로 부모 요소 선택하고 그걸 바꾼다~
+    }
+</script>
+<body>
+    <ul>
+        <li>리스트1</li>
+        <li id="li2">리스트2</li>
+        <li>리스트3</li>
+    </ul>
+    <button onClick="myFunc()">클릭</button>
+</body>
+
+</html>

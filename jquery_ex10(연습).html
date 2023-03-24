@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div{
+            width:100px;
+            height:100px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        var curWidth=100
+        var curHeight=100
+        function myFunc(){  
+        var myDiv=document.getElementById("my-div")
+        curWidth=curWidth+50
+        curHeight=curHeight+50
+        myDiv.style.width = curWidth+"px"
+        myDiv.style.height = curHeight+"px"
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        내 div
+    </div>
+    <button onClick="myFunc()">클릭</button>
+</body>
+</html>
